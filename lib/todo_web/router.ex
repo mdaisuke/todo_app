@@ -7,5 +7,6 @@ defmodule TodoWeb.Router do
 
   scope "/api", TodoWeb do
     pipe_through :api
+    resources "tasks", TaskController, except: [:new, :edit]
   end
 end
